@@ -20,7 +20,10 @@ fn main() {
 
             let guess: u32 = match guess.trim().parse() {
                 Ok(num) => num,
-                Err(_) => continue,
+                Err(_) => {
+                    println!("Invalid input. Please enter a valid number.");
+                    continue;
+                }
             };
 
         println!("You guessed: {guess}");
